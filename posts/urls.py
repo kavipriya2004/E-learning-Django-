@@ -9,6 +9,7 @@ from django.conf.urls import url
 urlpatterns = [
     path('', views.home, name='home'),
     #Custom admin panel urls
+    path('webadmin/send_message/', views.sendmessage, name='send'),
     path('webadmin/', views.webadmin, name='webadmin'),
     path('addpost/', views.add_post, name='addpost'),
     path('addcat/', views.add_cat, name='addcat'),
