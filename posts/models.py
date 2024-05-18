@@ -8,6 +8,13 @@ import time
 import os
 from edureka import settings
 
+class message(models.Model):
+    # Define your fields here
+    # For example:
+    # title = models.CharField(max_length=100)
+    # content = models.TextField()
+    pass
+
 class Customer(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     profile_pic= models.ImageField(upload_to='media/profile_pic',null=True,blank=True)
