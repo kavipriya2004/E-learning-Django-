@@ -4,6 +4,7 @@ from django.contrib.auth.models import Group, User
 from django.core.exceptions import ValidationError
 from .models import *
 from django.forms import inlineformset_factory
+from .models import message
 
 
 class PostForm(forms.ModelForm):
