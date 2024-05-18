@@ -19,8 +19,20 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.views.decorators.csrf import csrf_exempt
 from edureka.settings import *
 import razorpay
+import os
+import razorpay
+from django.conf import settings
+from django.shortcuts import render
+from django.http import HttpResponse
+
+KEY_ID = settings.RAZORPAY_KEY_ID
+KEY_SECRET = settings.RAZORPAY_KEY_SECRET
+
 client = razorpay.Client(auth=(KEY_ID, KEY_SECRET))
 # Create your views here.
+
+def send_message(request):
+    return HttpResponse("Message sent!")
 
 def home(request):
     allposts = Post.objects.all().filter(maincourse=True)
